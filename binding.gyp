@@ -26,6 +26,7 @@
         '-std=c++0x'
       ],
       'defines': [
+        'HAVE_STRUCT_TIMESPEC',
         '_FILE_OFFSET_BITS=64',
         '_LARGEFILE_SOURCE',
       ],
@@ -58,7 +59,7 @@
           }],
           ['OS=="win"', {
             'defines':[
-              'WIN32_LEAN_AND_MEAN'
+              'WIN32_LEAN_AND_MEAN', 'HAVE_STRUCT_TIMESPEC'
             ],
             'default_configuration': 'Debug',
             'configurations': {
